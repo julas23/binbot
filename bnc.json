@@ -1,0 +1,103 @@
+{
+    "APIKEY" : "NzNfXnzM6HTVRFJk7MJPwughgac8LmYsPgYtGHgncXsnkv04DoFYnyhobMYPfMbI",
+    "SECRETKEY" : "p1kF629TtWH2YyZXFbrqMZFDdOTpblgPq6jHpknfAqzwU68rzc65syeGqfCo48l8",
+    "USETESTNET" : false,
+    "CANCELLALLORDERS" : false,
+    "CLOSEALLPOSITIONS" : false,
+
+    "VERBOSE" : true,
+    "DEBUG" : true,
+    "LOGFILE" : "logs/log.txt",
+    "PLACEORDERS" : true,
+    "CHANGEMARGIN" : false,
+    "CHANGELEVERAGE" : false,
+    "USEMAXLEVERAGE" : false,
+    "MARGIN" : "CROSSED",
+    "QUOTE" : "BNFCR",
+
+    "REPORTLINES" : 48,
+    "REPORTCOLS" : 78,
+    "MARKETSDEPTH" : 5,
+    "MARKETSUPDATE" : 100,
+    "REFRESHTIME" : 1000,
+    "BUFFERTIME" : 125,
+
+    "PRICETICKS" : 64,
+
+    "DECIMALS" : 9,
+    "MAXORDERS" : 8,
+    "MAXRISK" : 0.01,
+    "MINPOSITION" : 5.5,
+    "MINPROFIT" : 0.0016,
+    "MAXLOSS" : 0.0016,
+    "LEVERAGE" : 20,
+
+    "TAKEPROFIT" : 0.0032,
+    "STOPLOSS" : 0.0032,
+
+    "FEETIERS" : [
+        [0.020,0.040],
+        [0.016,0.040],
+        [0.014,0.035],
+        [0.012,0.032],
+        [0.010,0.030],
+        [0.008,0.027],
+        [0.006,0.025],
+        [0.004,0.022],
+        [0.002,0.020],
+        [0.000,0.017]
+    ],
+    "MARKETS" : [
+
+        "SPELLUSDT",
+        "DENTUSDT",
+        "HOTUSDT",
+        "LEVERUSDT",
+
+        "MEMEUSDT",
+        "RSRUSDT",
+        "CKBUSDT",
+        "JASMYUSDT",
+
+        "XVGUSDT",
+        "DOGSUSDT",
+        "TURBOUSDT",
+        "NEIROUSDT",
+
+        "IOSTUSDT",
+        "BOMEUSDT",
+        "MEWUSDT",
+        "ONEUSDT",
+
+        "TLMUSDT",
+        "PEOPLEUSDT",
+        "CELRUSDT",
+        "RVNUSDT"
+
+    ]
+
+    "LEADER_ELECTION": {
+        "UPDATE_INTERVAL_HOURS": 6,
+        "SCORING_CRITERIA": {
+            "ROI_WEIGHT": 0.4,
+            "PNL_WEIGHT": 0.3,
+            "MAX_DRAWDOWN_WEIGHT": -0.2,
+            "WIN_RATE_WEIGHT": 0.1
+        },
+        "MIN_FOLLOWERS": 50
+    },
+
+    "RISK_MANAGEMENT": {
+        "RISK_FACTOR": 0.1,
+        "MAX_LEVERAGE_PER_TRADE": 10
+    },
+
+    "TRADE_FILTERS": {
+        "BLACKLIST_SYMBOLS": [],
+        "MIN_POSITION_VALUE_USD": 10.0
+    },
+
+    "TIMING": {
+        "COPY_INTERVAL_SECONDS": 10
+    }
+}
