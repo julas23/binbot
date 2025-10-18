@@ -1,0 +1,58 @@
+{
+    "USER" : "failed99",
+    "USETESTNET" : false,
+    "CANCELLALLORDERS" : false,
+    "CLOSEALLPOSITIONS" : false,
+
+    "VERBOSE" : true,
+    "DEBUG" : false,
+    "LOGFILE" : "./log.txt",
+    "PLACEORDERS" : false,
+    "CHANGEMARGIN" : false,
+    "CHANGELEVERAGE" : false,
+    "USEMAXLEVERAGE" : false,
+    "MARGIN" : "CROSSED",
+    "QUOTE" : "BNFCR",
+
+    "REPORTLINES" : 42,
+    "REPORTCOLS" : 64,
+    "MARKETSDEPTH" : 20,
+    "MARKETSUPDATE" : 100,
+    "REFRESHTIME" : 1000,
+    "BUFFERTIME" : 125,
+
+    "TRADETICKS" : 128,
+    "PRICETICKS" : 512,
+    "VARTOL" : 0.0008,
+
+    "DECIMALS" : 9,
+    "MAXORDERS" : 10,
+    "MAXRISK" : 0.33,
+    "MINPOSITION" : 25,
+    "MINPROFIT" : 0.0032,
+    "MAXLOSS" : 0.0032,
+    "LEVERAGE" : 8,
+
+    "TAKEPROFIT" : 0.0032,
+    "STOPLOSS" : 0.0064,
+
+    "FEETIERS" : [
+        [0.020,0.040],
+        [0.016,0.040],
+        [0.014,0.035],
+        [0.012,0.032],
+        [0.010,0.030],
+        [0.008,0.027],
+        [0.006,0.025],
+        [0.004,0.022],
+        [0.002,0.020],
+        [0.000,0.017]
+],
+    "MARKETS" : [
+
+        "BTCUSDT",
+        
+        "BTCUSDC"
+
+    ]
+}

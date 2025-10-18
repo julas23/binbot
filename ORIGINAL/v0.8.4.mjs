@@ -1,4 +1,3 @@
-
 // version -------------------------------------------------------------------------------------------------------------------------
 const version = "v0.8.4";
 const time0 = Math.floor(Date.now() / 1000);
@@ -69,21 +68,41 @@ var time = time0;
             keys[3]:
             keys[1];
 
+const wsLogger = {
+    trace: (...args) => console.debug('[TRACE]', ...args),
+    debug: (...args) => console.debug('[DEBUG]', ...args),
+    info: (...args) => console.info('[INFO]', ...args),
+    warn: (...args) => console.warn('[WARN]', ...args),
+    error: (...args) => console.error('[ERROR]', ...args),
+    child: function (opts = {}) {
+        return {
+            ...this,
+            ...opts,
+            trace: this.trace.bind(this),
+            debug: this.debug.bind(this),
+            info: this.info.bind(this),
+            warn: this.warn.bind(this),
+            error: this.error.bind(this),
+            child: this.child.bind(this),
+        };
+    },
+};
+
     const mainClient = new MainClient({
         api_key: TEMPORARY_KEYS.key,
         api_secret: TEMPORARY_KEYS.secret,
-    },{},config.USETESTNET);
+    }, { logger: wsLogger }, config.USETESTNET);
+
     const usdmClient = new USDMClient({
         api_key: TEMPORARY_KEYS.key,
         api_secret: TEMPORARY_KEYS.secret,
         disableTimeSync: false
-    },{},config.USETESTNET);
+    }, { logger: wsLogger }, config.USETESTNET);
+
     const wsClient = new WebsocketClient({
         api_key: TEMPORARY_KEYS.key,
         api_secret: TEMPORARY_KEYS.secret,
-    });
-    const ws = Array(config.MARKETS.length);
-    //for(var m=0;m<config.MARKETS.length;m++)ws[m] = new WebSocket('ws://localhost:'+(10000+m));
+    }, { logger: wsLogger }, config.USETESTNET);
 
     const DATA = {};
         DATA.marketsList = [];
@@ -1680,7 +1699,7 @@ var time = time0;
             }
         };
 
-function subsctibe(){
+function subscribe(){
     if(config.DEBUG)DATA.reportData.push("Will now Subscribe to Channels...");
     wsClient.subscribeUsdFuturesUserDataStream(config.USETESTNET);
     for(var m=0;m<DATA.marketsList.length;m++){
@@ -1734,7 +1753,7 @@ async function main(){
         //setInterval(BINANCE.checkProfit,config.REFRESHTIME);
     },30000);
 
-    subsctibe();
+    subscribe();
 }
 
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -1749,10 +1768,12 @@ async function test(){
     const res = await usdmClient.getBalance();
     //usdmClient.getBalance();
 
+async function test(){
+    const res = await usdmClient.getBalance();
+    //usdmClient.getBalance();
+//test();
     console.log(res);
 }
+}
 
-//test();
-
-// ---------------------------------------------------------------------------------------------------------------------------------
-
+//test();// ---------------------------------------------------------------------------------------------------------------------------------

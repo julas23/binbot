@@ -1,0 +1,3 @@
+python-binance
+websockets # python-binance dependency
+

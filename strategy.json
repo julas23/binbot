@@ -1,0 +1,28 @@
+{
+    "strategy_name": "Grid Trading (Refactored)",
+    "description": "Strategy parameters extracted from original Node.js bot config.",
+    "markets": [
+        "BTCUSDT",
+        "BTCUSDC"
+    ],
+    "leverage": 8,
+    "margin_type": "CROSSED",
+    "max_orders": 10,
+    "min_position_value": 25,
+    "min_profit_percentage": 0.0032,
+    "max_loss_percentage": 0.0032,
+    "take_profit_percentage": 0.0032,
+    "stop_loss_percentage": 0.0064,
+    "trade_ticks": 128,
+    "price_ticks": 512,
+    "var_tolerance": 0.0008,
+    "report_lines": 42,
+    "report_cols": 64,
+    "markets_depth": 20,
+    "markets_update_interval": 100,
+    "refresh_time": 1000,
+    "buffer_time": 125,
+    "quote_asset": "BNFCR",
+    "place_test_orders": false, 
+    "test_order_quantity": 0.001
+}
