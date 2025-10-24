@@ -1,6 +1,6 @@
 {
-    "BINANCE_API_KEY": "NzNfXnzM6HTVRFJk7MJPwughgac8LmYsPgYtGHgncXsnkv04DoFYnyhobMYPfMbI",
-    "BINANCE_API_SECRET": "p1kF629TtWH2YyZXFbrqMZFDdOTpblgPq6jHpknfAqzwU68rzc65syeGqfCo48l8",
+    "BINANCE_API_KEY": "",
+    "BINANCE_API_SECRET": "",
     "USE_TESTNET": false,
     "LOG_LEVEL": "INFO"
 }
